@@ -1,10 +1,9 @@
 <h2>Tiles</h2>
-<div *ngIf="tiles" class="grid" style="border: 1px solid black">
-<ul>
+<div *ngIf="tiles"  style="border: 1px solid black">
+<ul class="grid-container">
   <li *ngFor="let tile of tiles">
-    <span>
-      {{tile}}
-    </span>
+      <app-tile [tile]="tile"></app-tile>
   </li>
 </ul>
 </div>
+<app-sidebar></app-sidebar>

@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  list-style: none;
+  padding-inline-end: 20px;
+  padding-inline-start: 20px
+}
+
+.tile {
+  height:150px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 1em 0
+}
+
+
+.tile-title {
+  margin: 0;
+  padding-left: 1em
+}
+
+.display-temp {
+  color:skyblue;
+  font-size: 30px
+}
+
+.temp-container {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:70%
+}
+
+@media (min-width:1200px) {
+  .tile{
+    height:200px
+  }
+}

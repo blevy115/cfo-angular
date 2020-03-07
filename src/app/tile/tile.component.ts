@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Tile } from '../tile';
 import { TileService } from '../tile.service';
 
@@ -8,7 +8,7 @@ import { TileService } from '../tile.service';
   styleUrls: ['./tile.component.css']
 })
 export class TileComponent implements OnInit {
-
+  @Input('tile') tile:Tile
   constructor() { }
 
   ngOnInit(): void {
