@@ -1,1 +1,10 @@
-<p>dashboard works!</p>
+<h2>Tiles</h2>
+<div *ngIf="tiles" class="grid" style="border: 1px solid black">
+<ul>
+  <li *ngFor="let tile of tiles">
+    <span>
+      {{tile}}
+    </span>
+  </li>
+</ul>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tile } from '../tile';
+import { TileService } from '../tile.service';
 
 @Component({
   selector: 'app-tile',
