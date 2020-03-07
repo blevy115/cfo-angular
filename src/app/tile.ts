@@ -1,0 +1,23 @@
+export interface Tile {
+  Date: string,
+  TempHighF: number,
+  TempAvgF: number,
+  TempLowF: number,
+  DewPointHighF: number|string,
+  DewPointAvgF: number|string,
+  DewPointLowF: number|string,
+  HumidityHighPercent: number|string,
+  HumidityAvgPercent: number|string,
+  HumidityLowPercent: number|string,
+  SeaLevelPressureHighInches: number|string,
+  SeaLevelPressureAvgInches: number|string,
+  SeaLevelPressureLowInches: number|string,
+  VisibilityHighMiles: number|string,
+  VisibilityAvgMiles: number|string,
+  VisibilityLowMiles: number|string,
+  WindHighMPH: number|string,
+  WindAvgMPH: number|string,
+  WindGustMPH: number|string,
+  PrecipitationSumInches:number|string,
+  Events: string
+}
