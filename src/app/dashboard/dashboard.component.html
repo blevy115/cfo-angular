@@ -1,7 +1,15 @@
 <h2>Tiles</h2>
 <div *ngIf="tiles"  style="border: 1px solid black">
-<ul class="grid-container">
-  <li *ngFor="let tile of tiles">
+<ul cdkDropList class="grid-container"
+  (cdkDropListDropped)="drop($event)"
+  cdkDropListOrientation="horizontal"
+>
+  <li *ngFor="let tile of tiles"
+  class="grid-item"
+  cdkDrag
+  [class.selected]="tile === selectedTile"
+  (click)="onSelect(tile)"
+  >
       <app-tile [tile]="tile"></app-tile>
   </li>
 </ul>
