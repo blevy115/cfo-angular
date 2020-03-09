@@ -1,5 +1,6 @@
-<h2>Tiles</h2>
-<div *ngIf="tiles"  style="border: 1px solid black">
+<mat-sidenav-container>
+<mat-sidenav-content>
+<div *ngIf="tiles"  style="border: 1px solid black;">
 <ul cdkDropList class="grid-container"
   (cdkDropListDropped)="drop($event)"
   cdkDropListOrientation="horizontal"
@@ -8,10 +9,15 @@
   class="grid-item"
   cdkDrag
   [class.selected]="tile === selectedTile"
-  (click)="onSelect(tile)"
+  mat-button (click)="onSelect(tile) ;sidenav.toggle()"
   >
       <app-tile [tile]="tile"></app-tile>
   </li>
 </ul>
 </div>
-<app-sidebar></app-sidebar>
+</mat-sidenav-content>
+<mat-sidenav #sidenav mode="side" position="end" style="height:100%">
+  <app-sidebar *ngIf="selectedTile" [tile]="selectedTile" style="flex-shrink:0 height: 100%;"></app-sidebar>
+</mat-sidenav>
+
+</mat-sidenav-container>

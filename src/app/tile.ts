@@ -19,5 +19,6 @@ export interface Tile {
   WindAvgMPH: number|string,
   WindGustMPH: number|string,
   PrecipitationSumInches:number|string,
-  Events: string
+  Events: string,
+  Color?: string,
 }

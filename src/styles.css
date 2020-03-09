@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+  text-align: center
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -77,3 +81,17 @@
 .grid-container.cdk-drop-list-dragging .grid-item:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sidebar-element-title {
+  font-weight: 500;
+  margin-right:10px
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

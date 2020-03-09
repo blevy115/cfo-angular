@@ -10,7 +10,7 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 })
 export class DashboardComponent implements OnInit {
   tiles: Tile[] = []
-  selectedTile:Tile
+  selectedTile:Tile = null
   constructor(private tileService: TileService) { }
 
   ngOnInit(): void {

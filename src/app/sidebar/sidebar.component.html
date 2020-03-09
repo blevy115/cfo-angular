@@ -1,1 +1,18 @@
-<p>sidebar works!</p>
+<div class="sidebar" style="border: 1px solid black;">
+  <div class="sidebar-element">
+    <span class="sidebar-element-title">Title:</span>
+    <p>Temperature on {{tile.Date}}</p>
+  </div>
+  <div class="sidebar-element">
+    <span class="sidebar-element-title">KPI:</span>
+    <p>High Temp:{{tile.TempHighF}}F</p>
+    <p>Avg Temp:{{tile.TempAvgF}}F</p>
+    <p>Low Temp:{{tile.TempLowF}}F</p>
+    <p>High Wind{{tile.WindHighMPH}}MPH</p>
+    <p>Avg Wind{{tile.WindAvgMPH}}MPH</p>
+  </div>
+  <div class="sidebar-element">
+    <span class="sidebar-element-title">Color:</span>
+    <input [(ngModel)]="tile.Color" placeholder="Color"/>
+  </div>
+</div>
